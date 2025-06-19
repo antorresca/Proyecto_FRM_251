@@ -1,0 +1,47 @@
+# === ROS 2 (colcon) build artifacts ===
+build/
+install/
+log/
+
+# === Python bytecode ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === ROS messages and services (si se generan en Python) ===
+msg/_*.py
+srv/_*.py
+action/_*.py
+
+# === Dynamic reconfigure (ROS 1 only, no aplica en ROS 2) ===
+# OMITIDO
+
+# === IDEs and Editor stuff ===
+.project
+.cproject
+CMakeLists.txt.user
+qtcreator-*
+*.user
+
+# === Eclipse, QtCreator, VSCode, etc. ===
+*.swp
+*~
+.#*
+.vscode/
+
+# === ROS-specific ===
+CATKIN_IGNORE  # aún puede aparecer si migraste de ROS 1
+ament_index/
+
+# === Archivos personales o experimentales ===
+*.pcd
+
+# === Documentación generada u obsoleta ===
+*.dox
+*.wikidoc
+
+# === Otros ===
+/planning/cfg
+/planning/docs
+/planning/src
