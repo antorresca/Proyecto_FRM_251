@@ -89,8 +89,13 @@ Para ello, se tuvo en cuenta los siguientes datos del robot:
 * Python con OpenCV
 
 ## Resultados Obtenidos
-Inicial al desarrollo del 
+Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre que se iba a diseñar para el robot, en primera etapa se habia determinado un tipo de garra mecánica, la cual es activada con un motor que permite la apertura o el cierre de la garra como se ve.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4e8b0913-7c3d-4a44-bd0a-2bda5537c0aa" alt=" Gripper Inicial" height="300"/>
+</p>
+
+En el proceso de diseño se nos aconsejo una opción de diseño con robotica suave para el agarre, esto con el fin de poder atrapar diferentes geometrias de "Basuras", optando finalmente por esta 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510" alt="Imagen 1" height="300"/>
@@ -102,9 +107,9 @@ Inicial al desarrollo del
 ## Dificultades en el proceso
 
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/4e8b0913-7c3d-4a44-bd0a-2bda5537c0aa" alt=" Gripper Inicial" height="300"/>
-</p>
+
+* se calento un motor y se daño /, lueo de 15 minutos de funcionamiento continuo se dañó, el gripper.
+
 
 
 ## Autoevaluacion Grupal
