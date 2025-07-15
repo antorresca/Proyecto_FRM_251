@@ -109,7 +109,9 @@ En el proceso de diseño se nos aconsejo una opción de diseño con robotica sua
 
 
 * se calento un motor y se daño /, lueo de 15 minutos de funcionamiento continuo se dañó, el gripper.
-
+* el entorno del mapa no permitia inicialmente el movimiento del robot suavement por la friccion.
+* el canal de comunicacion con el robot para su movimiento se sturaba con una duracion maxima de 4 minutos
+* 
 
 
 ## Autoevaluacion Grupal
