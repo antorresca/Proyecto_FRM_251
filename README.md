@@ -93,15 +93,9 @@ Inicial al desarrollo del
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510" alt="Imagen 1" width="300"/>
-  <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" alt="Imagen 2" width="300"/>
+  <img src="https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510" alt="Imagen 1" height="300"/>
+  <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" alt="Imagen 2" height="300"/>
 </p>
-
-
-
-
-![WhatsApp Image 2025-07-14 at 10 13 18 AM](https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510)
-![WhatsApp Image 2025-07-14 at 10 12 29 AM](https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920)
 
 
 
