@@ -26,11 +26,6 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * Evaluar el desempeño del sistema de manipulación y agarre bajo diferentes condiciones de prueba. 
 * Documentar todo el proceso de desarrollo y pruebas para retroalimentación académica y técnica.
 
-
-## 🕷️Hexapodo v1.0
-
-Para mayor información del **_Hexapodo_** desarrollado por [Felipe Chaves Delgadillo](mailto:fchaves@unal.edu.co) y [Andres Camilo Torres Cajamarca](mailto:antorresca@unal.edu.co) consultar el [repositorio](https://github.com/labsir-un/Hexapod_Unal) de la organización [LabSir](https://github.com/labsir-un) de la Universidad Nacional de Colombia 
-
 ## 🎮 Control
 
 Para el algoritmo de control, se tuvo en cuenta que el robot emplea rutinas predefinidas que por simplicidad no se modificaran para evitar rehacer la cinematica; por ello se realizó un control como una _maquina de estados discreta_, para ello se siguió el siguiente diagrama de flujo:
@@ -94,6 +89,19 @@ Para ello, se tuvo en cuenta los siguientes datos del robot:
 * Python con OpenCV
 
 ## Resultados Obtenidos
+Inicial al desarrollo del 
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510" alt="Imagen 1" width="300"/>
+  <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" alt="Imagen 2" width="300"/>
+</p>
+
+
+
+
+![WhatsApp Image 2025-07-14 at 10 13 18 AM](https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510)
+![WhatsApp Image 2025-07-14 at 10 12 29 AM](https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920)
 
 
 
@@ -103,3 +111,8 @@ Para ello, se tuvo en cuenta los siguientes datos del robot:
 
 ## Autoevaluacion Grupal
 
+## Autoevaluacion Individual
+
+## Bibliografía
+
+Este proyecto no sería posible sin el desarrollo previo del Hexapodo, para mayor información del **_Hexapodo_** desarrollado por [Felipe Chaves Delgadillo](mailto:fchaves@unal.edu.co) y [Andres Camilo Torres Cajamarca](mailto:antorresca@unal.edu.co) consultar el [repositorio](https://github.com/labsir-un/Hexapod_Unal) de la organización [LabSir](https://github.com/labsir-un) de la Universidad Nacional de Colombia 
