@@ -15,6 +15,18 @@ El sistema de navegación del hexápodo será asistido desde MATLAB, donde se es
 
 El sistema se implementará sobre ROS 2 Humble como middleware principal, y el control del movimiento se realizará mediante una máquina de estados o un controlador PI, según los resultados de desarrollo. La lógica de control será acoplada a rutinas previamente definidas en simulación y modificadas para adaptarse al comportamiento del entorno físico. 
 
+## Objetivos 
+* Navegar hacia las ubicaciones de las basuras detectadas. 
+* Recoger objetos con el gripper implementado. 
+* Transportar los objetos a una de dos zonas predefinidas de descarga. 
+* Implementar un sistema de visión artificial con cámara fija cenital para:
+    * Localizar en tiempo real la posición del robot (odometría por visión). 
+    * Detectar la posición de los residuos (objetos de colores).
+* Integrar la visión con el entorno de control en MATLAB para generar trayectorias. 
+* Evaluar el desempeño del sistema de manipulación y agarre bajo diferentes condiciones de prueba. 
+* Documentar todo el proceso de desarrollo y pruebas para retroalimentación académica y técnica.
+
+
 ## 🕷️Hexapodo v1.0
 
 Para mayor información del **_Hexapodo_** desarrollado por [Felipe Chaves Delgadillo](mailto:fchaves@unal.edu.co) y [Andres Camilo Torres Cajamarca](mailto:antorresca@unal.edu.co) consultar el [repositorio](https://github.com/labsir-un/Hexapod_Unal) de la organización [LabSir](https://github.com/labsir-un) de la Universidad Nacional de Colombia 
