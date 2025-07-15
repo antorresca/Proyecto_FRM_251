@@ -103,7 +103,7 @@ Inicial al desarrollo del
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3dfff4d6-b302-442f-b940-0bd68445a373" alt=" Gripper Inicial" height="300"/>
+  <img src="https://github.com/user-attachments/assets/4e8b0913-7c3d-4a44-bd0a-2bda5537c0aa" alt=" Gripper Inicial" height="300"/>
 </p>
 
 
