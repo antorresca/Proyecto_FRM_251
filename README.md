@@ -101,6 +101,7 @@ Inicial al desarrollo del
 
 ## Dificultades en el proceso
 
+<img width="513" height="362" alt="image" src="https://github.com/user-attachments/assets/3dfff4d6-b302-442f-b940-0bd68445a373" />
 
 
 ## Autoevaluacion Grupal
