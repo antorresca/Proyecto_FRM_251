@@ -61,13 +61,24 @@ Para ello, se tuvo en cuenta los siguientes datos del robot:
 
 ## Materiales
 
-* Robot hexápodo con 18 grados de libertad, basado en arquitectura compatible 
-con ROS 2. 
-* Gripper fabricado en manufactura aditiva, acoplado a la parte frontal de 
-hexapodo 
+* Robot hexápodo con 18 grados de libertad, basado en arquitectura compatible con ROS 2. 
+* Gripper fabricado en manufactura aditiva, acoplado a la parte frontal de hexapodo 
 * Cámara cenital de alta resolución para captura del entorno. 
-* Computador con ROS 2 Humble y MATLAB instalados para ejecución de control 
-y visión. 
+* Computador con ROS 2 Humble y MATLAB instalados para ejecución de control y visión. 
 * Objetos de prueba: objetos de colores en forma de bola simulando basura. 
 * Entorno de simulación en CoppeliaSim para pruebas virtuales de las rutinas.
+
+## Herramientas de software
+
+* Matlab
+* CoppeliaSim
+* ROS 2
+* Autodesk Inventor
+* Python con OpenCV
+
+## Resultados Obtenidos
+
+## Dificultades en el proceso
+
+## Autoevaluacion Grupal
 
