@@ -95,7 +95,23 @@ Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre
   <img src="https://github.com/user-attachments/assets/4e8b0913-7c3d-4a44-bd0a-2bda5537c0aa" alt=" Gripper Inicial" height="300"/>
 </p>
 
-En el proceso de diseño se nos aconsejo una opción de diseño con robotica suave para el agarre, esto con el fin de poder atrapar diferentes geometrias de "Basuras", optando finalmente por esta 
+En el proceso de diseño se nos aconsejo una opción de diseño con robotica suave para el agarre, esto con el fin de poder atrapar diferentes geometrias de "Basuras", optando finalmente por esta ultima. Realizando un nuevo diseño de gripper se tuvó en cuenta tanto la altura donde poner el gripper respecto a las "basura" que debia recoger, siendo acorde con la cinematica del robot situarlo debajo del nivel de los motores, además se ecogio una forma en la que la revolución del eje del motor 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/682cac79-6eb0-45d0-9029-a990da5a7276" alt="Imagen 1" height="300"/>
+  <img src="https://github.com/user-attachments/assets/a8b24f57-1655-44d9-b71b-7a413b90c6a9" alt="Imagen 2" height="300"/>
+</p>
+
+
+
+
+<img width="1574" height="885" alt="image" src="https://github.com/user-attachments/assets/682cac79-6eb0-45d0-9029-a990da5a7276" />
+
+<img width="1574" height="885" alt="image" src="https://github.com/user-attachments/assets/a8b24f57-1655-44d9-b71b-7a413b90c6a9" />
+
+
+
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510" alt="Imagen 1" height="300"/>
