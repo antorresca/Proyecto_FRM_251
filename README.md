@@ -110,6 +110,13 @@ En el proceso de diseño se nos aconsejo una opción de diseño con robotica sua
   <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" height="300"/>
 </p>
 
+### Videos
+
+<div align ='center'>
+   <video src='https://github.com/user-attachments/assets/2e269eea-8fa4-4e10-8801-4226db37f44b'>
+</div>
+
+
 
 
 ## Dificultades en el proceso
