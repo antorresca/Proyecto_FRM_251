@@ -27,7 +27,7 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * Documentar todo el proceso de desarrollo y pruebas para retroalimentación académica y técnica.
 ## 📐 Generacion de Trayectorias 
 
-Para la genereción de trayectorias se utiliza matlab, en este caso se realizó un algoritmo que genera la trayectoria a travez del método PRM donde dependiendo del color del objeto deja como punto final la zona del respectivo color.  Además, se uso la tecnica de algormitmo bug para dibujar una linea recta desde el punto inicial del robot hasta el objeto mas cercano . Finalmente se envian los datos a Ros mediante el ROS toolbox de matlab .  
+Para la genereción de trayectorias se utiliza matlab, en este caso se realizó un algoritmo que genera la trayectoria a travez del método PRM donde dependiendo del color del objeto deja como punto final la zona del respectivo color. Finalmente se envian los datos a Ros mediante el ROS toolbox de matlab .  
 <p align="center">
    <img width="400" height="300" alt="TrayectoriaBug" src="https://github.com/user-attachments/assets/4dbe2f8a-6b45-43f5-b44d-b5ee3519dcab" />
    <img width="400" height="300" alt="TrayectoriaBug2" src="https://github.com/user-attachments/assets/a12ad9f0-8c5d-446f-8e1a-c9a5949c8a6f" />
