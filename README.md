@@ -107,8 +107,9 @@ Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre
 
 En el proceso de diseño se nos aconsejo una opción de diseño con robotica suave para el agarre, esto con el fin de poder atrapar diferentes geometrias de "Basuras", optando finalmente por esta ultima. Realizando un nuevo diseño de gripper se tuvó en cuenta tanto la altura donde poner el gripper respecto a las "basura" que debia recoger, siendo acorde con la cinematica del robot situarlo debajo del nivel de los motores, además se ecogio una forma en la que la revolución del eje del motor 
 A continuacion se presenta el diseño de Solidworks.
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/208c46f6-d9a4-42ce-908a-1b50ba367864" alt=" Gripper Inicial" height="300"/>
+  <img src="https://github.com/user-attachments/assets/208c46f6-d9a4-42ce-908a-1b50ba367864" alt=" Gripper Inicial" height="400"/>
 </p>
 
 Para la construccion del Gripper se fabricaron las abrazaderas en un material Flexible (TPU), los soportes para el motor se fabricaron en un material rigido (PLA) y para aumentar el agarre se colocaron circulos de silicona. En la siguientes imagenes se puede ver su contruccion final.
@@ -132,13 +133,13 @@ Para localizar el robot, se emplean imágenes capturadas por una cámara cenital
 Para llevar a cabo la identificación y el posicionamiento de objetos, se emplearon las bibliotecas de OpenCV en Python. Se definió que los elementos a recolectar serían de color azul o verde, al igual que las áreas donde debían ubicarse. Con el fin de determinar con precisión la posición y orientación del robot, se añadió una flecha roja junto a un punto amarillo que marca su centroide. A continuación se muestra una imagen que ilustra el robot y los objetos en su zona de trabajo.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9ffaab6a-804f-4eeb-b121-3da8a92553b5" height="300"/>
+  <img src="https://github.com/user-attachments/assets/9ffaab6a-804f-4eeb-b121-3da8a92553b5" height="400"/>
 </p>
 
 Una vez capturada la imagen, se procesa con OpenCV para extraer las posiciones de los objetos y del robot. Para ello, se aplican máscaras de color verde, azul y amarillo que permiten segmentar las áreas ocupadas por cada objeto y calcular sus centroides. De forma análoga, se utiliza una máscara roja para identificar la flecha del robot y, a partir de ella, determinar su orientación. La siguiente imagen ilustra tanto la detección de los centroides de los objetos como la localización y dirección del robot.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4033d42c-bde5-4daa-bd17-7d0e0bd0cdb4" height="300"/>
+  <img src="https://github.com/user-attachments/assets/892240dc-9091-489f-9c3f-ad26bb964ce" height="400"/>
 </p>
 
 ### Videos
