@@ -46,9 +46,15 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 
 Para la genereción de trayectorias se utiliza matlab, en este caso se realizó un algoritmo que genera la trayectoria a travez del método PRM donde dependiendo del color del objeto deja como punto final la zona del respectivo color. Finalmente se envian los datos a Ros mediante el ROS toolbox de matlab .  
 <p align="center">
-   <img width="400" height="300" alt="TrayectoriaBug" src="https://github.com/user-attachments/assets/4dbe2f8a-6b45-43f5-b44d-b5ee3519dcab" />
-   <img width="400" height="300" alt="TrayectoriaBug2" src="https://github.com/user-attachments/assets/a12ad9f0-8c5d-446f-8e1a-c9a5949c8a6f" />
+   <img width="400" height="300" alt="TrayectoriaPRM" src="https://github.com/user-attachments/assets/3a2bdb2e-009c-4def-8be3-6d9c184d06a9" />
+   <img width="400" height="300" alt="TrayectoriaPRM2" src="https://github.com/user-attachments/assets/f6ed62d4-172b-43d6-8d8f-245d87bced2d" />
 </p>
+
+[//]: <p align="center">
+[//]:   <img width="400" height="300" alt="TrayectoriaBug" src="https://github.com/user-attachments/assets/4dbe2f8a-6b45-43f5-b44d-b5ee3519dcab" />
+[//]:   <img width="400" height="300" alt="TrayectoriaBug2" src="https://github.com/user-attachments/assets/a12ad9f0-8c5d-446f-8e1a-c9a5949c8a6f" />
+[//]: </p>
+
 
 
 ## 🎮 Control
