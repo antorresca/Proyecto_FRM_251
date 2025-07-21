@@ -46,10 +46,12 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 # 🌀Desarrollo 
 
 Basados en la versión 1.0, se inicia el proceso de desarrollo de la versión 2.0, iniciando con algunas modificaciones en cuanto a Hardware enfocadas en mejorar el andar del robot.
-1. Se realiza un cambio en la conexión de potencia para evitar limitaciones en la corriente del motor [seccion](## 💪Potencia eléctrica)   
-2. Se realiza la impresión de una carcaza que cubre los circuitoe y elementos que controlan el robot, además, peromite la ubicacióin de un indicador para el sistema de visón que indicará la orientación del         robot. A continuación se muestra una imagen de la carcaza impresa.
-3. Se realiza el desarrollo de un griper, el cuál se va a encargar de sujetar la lata que se va a seleccionar de acuerdo a su color, para el desarrollo de este gripper se tomó como base la tería de gripper flexible o adaptable a la superficie a sujetar (Soft-Gripping). Este griper diseñado se imprime en PLA y es actuado por un servomotor, el cual se ubica en la parte frontal del robot para de esta manera hacer la sujeción de los elementos a clasificar. A contunuación el gripper y su acople al cahsis del robot hexapodo.
-4. En cuanto a la progración, se cambia la forma en que se envía la información a los motores, esto con el fin de reducir el volumen de datos enviados por el canal TTL, ya que se evidenció la saturación del buffer debido a la cantidad de información enviada, teniendo en cuenta que son 18 motores y a cada uno se le envía información por el mísmo canal.
+1. Se realiza un cambio en la conexión de potencia para evitar limitaciones en la corriente del motor [💪Potencia eléctrica](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#potencia-el%C3%A9ctrica) 
+2. Se realiza la impresión de una carcaza que cubre los circuitoe y elementos que controlan el robot, además, peromite la ubicacióin de un indicador para el sistema de visón que indicará la orientación del robot. [🐢Diseño y contruccion de la carcasa](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#dise%C3%B1o-y-contruccion-de-la-carcasa)
+3. Se realiza el desarrollo de un griper, el cuál se va a encargar de sujetar la lata que se va a seleccionar de acuerdo a su color, para el desarrollo de este gripper se tomó como base la tería de gripper flexible o adaptable a la superficie a sujetar (Soft-Gripping). Este griper diseñado se imprime en PLA y es actuado por un servomotor, el cual se ubica en la parte frontal del robot para de esta manera hacer la sujeción de los elementos a clasificar. [🖐️Diseño y construccion del Gripper](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#%EF%B8%8Fdise%C3%B1o-y-construccion-del-gripper)
+4. Se implementa un módulo de visión de máquina que se va a encargar del la captura de imágenes y la elaboración del mapa global. [👁️Detección y localizacion con OpenCV](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#dise%C3%B1o-y-contruccion-de-la-carcasa)
+5. Utilizando técnicas de generación de trayectorias se implementa un algoritmo de navegación PRM usando Matlab. [v📐Generacion de Trayectorias](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#generacion-de-trayectorias)
+6. En cuanto a la programación, se cambia la forma en que se envía la información a los motores, esto con el fin de reducir el volumen de datos enviados por el canal TTL, ya que se evidenció la saturación del buffer debido a la cantidad de información enviada, teniendo en cuenta que son 18 motores y a cada uno se le envía información por el mísmo canal. [🎮Control](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#control)
 
 ## 💪Potencia eléctrica
 La versión 1.0 del Hexapodo tenia implementado una placa U2D2 que tiene una corriente máxima de operación de 10 Amperios, teniendo en cuenta que los motores en conjunto consumen una corriente mayor, se procedió a reenplazarla por un HUB que no limita la corriente, en la sigueinte imágen se presenta la tarjeta reemplazada y el HUB en su lugar de operación dentro del robot. Esto hizo parte de las mejoras en cuanto a [seccion](#hardware)
@@ -89,6 +91,13 @@ Para localizar el robot, se emplean imágenes capturadas por una cámara cenital
   <img src="https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510" height="300"/>
   <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" height="300"/>
 </p>
+
+## 📷Configuración de cámara
+Para la captura del entorno se realizó el montaje de la cámara IP modelo C18PROX-F-4mm en la grua Maya, a través del protocolo RTSP se establece la comunicación para la obtención de las imágenes.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6dc08b7e-2489-45e0-ac06-d086fa5937a6" height="300"/>
+</p>  
+El link de conexión de la cámara es el siguiente: rtsp://192.168.1.234/live/ch00_0
 
 ## 👁️Detección y localizacion con OpenCV
 
@@ -178,8 +187,6 @@ Por otro lado, se determinó que las tolerancias serian de
 
 * Tolerancia de distancia: 18cm (distancia entre centro del robot al centro del gripper)
 * Tolerancia de giro: 8° (minimiza la posibilidad de entrar en bucle)
-
-## 📷Configuración de cámara
 
 ## 🏗️ROS 2
 
