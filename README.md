@@ -26,7 +26,7 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * Evaluar el desempeño del sistema de manipulación y agarre bajo diferentes condiciones de prueba. 
 * Documentar todo el proceso de desarrollo y pruebas para retroalimentación académica y técnica.
 
-* ## Materiales
+## Materiales
 
 * Robot hexápodo con 18 grados de libertad, basado en arquitectura compatible con ROS 2. 
 * Gripper fabricado en manufactura aditiva, acoplado a la parte frontal de hexapodo 
@@ -49,10 +49,6 @@ Para la genereción de trayectorias se utiliza matlab, en este caso se realizó 
    <img width="400" height="300" alt="TrayectoriaBug" src="https://github.com/user-attachments/assets/4dbe2f8a-6b45-43f5-b44d-b5ee3519dcab" />
    <img width="400" height="300" alt="TrayectoriaBug2" src="https://github.com/user-attachments/assets/a12ad9f0-8c5d-446f-8e1a-c9a5949c8a6f" />
 </p>
-
-
-
-
 
 
 ## 🎮 Control
@@ -102,7 +98,7 @@ Para ello, se tuvo en cuenta los siguientes datos del robot:
 
 
 
-## Resultados Obtenidos
+## Diseño y construccion del Gripper
 Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre que se iba a diseñar para el robot, en primera etapa se habia determinado un tipo de garra mecánica, la cual es activada con un motor que permite la apertura o el cierre de la garra como se ve.
 
 <p align="center">
