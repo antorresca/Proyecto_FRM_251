@@ -83,6 +83,8 @@ Para la construccion del Gripper se utilizo un motor MG90 como actuador, por otr
 </p>
 
 ## 🏞️Descripción del entorno
+Para que la cámara y el robot tengan un espacio adecuado se utiliza un plano de color blanco el cual tiene dos zonas coloreadas para separar los objetos de acuerdo a su color (Azul y Verde). Este plano tiene medidas de 101 cm x 204 cm y las zonas donde se ubican los elementos separados son de 30 cm x 54 cm cada una.
+
 
 ## 🐢Diseño y contruccion de la carcasa
 
