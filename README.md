@@ -25,6 +25,23 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * Integrar la visión con el entorno de control en MATLAB para generar trayectorias. 
 * Evaluar el desempeño del sistema de manipulación y agarre bajo diferentes condiciones de prueba. 
 * Documentar todo el proceso de desarrollo y pruebas para retroalimentación académica y técnica.
+
+* ## Materiales
+
+* Robot hexápodo con 18 grados de libertad, basado en arquitectura compatible con ROS 2. 
+* Gripper fabricado en manufactura aditiva, acoplado a la parte frontal de hexapodo 
+* Cámara cenital de alta resolución para captura del entorno. 
+* Computador con ROS 2 Humble y MATLAB instalados para ejecución de control y visión. 
+* Objetos de prueba: objetos de colores en forma de bola simulando basura. 
+* Entorno de simulación en CoppeliaSim para pruebas virtuales de las rutinas.
+
+## Herramientas de software
+
+* Matlab
+* CoppeliaSim
+* ROS 2
+* Autodesk Inventor
+* Python con OpenCV
 ## 📐 Generacion de Trayectorias 
 
 Para la genereción de trayectorias se utiliza matlab, en este caso se realizó un algoritmo que genera la trayectoria a travez del método PRM donde dependiendo del color del objeto deja como punto final la zona del respectivo color. Finalmente se envian los datos a Ros mediante el ROS toolbox de matlab .  
@@ -83,22 +100,7 @@ Como se puede observar, en la mayoria de los casos se logra llegar al objetivo. 
 Para ello, se tuvo en cuenta los siguientes datos del robot:
 
 
-## Materiales
 
-* Robot hexápodo con 18 grados de libertad, basado en arquitectura compatible con ROS 2. 
-* Gripper fabricado en manufactura aditiva, acoplado a la parte frontal de hexapodo 
-* Cámara cenital de alta resolución para captura del entorno. 
-* Computador con ROS 2 Humble y MATLAB instalados para ejecución de control y visión. 
-* Objetos de prueba: objetos de colores en forma de bola simulando basura. 
-* Entorno de simulación en CoppeliaSim para pruebas virtuales de las rutinas.
-
-## Herramientas de software
-
-* Matlab
-* CoppeliaSim
-* ROS 2
-* Autodesk Inventor
-* Python con OpenCV
 
 ## Resultados Obtenidos
 Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre que se iba a diseñar para el robot, en primera etapa se habia determinado un tipo de garra mecánica, la cual es activada con un motor que permite la apertura o el cierre de la garra como se ve.
@@ -111,7 +113,7 @@ En el proceso de diseño se nos aconsejo una opción de diseño con robotica sua
 A continuacion se presenta el diseño de Solidworks.
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/208c46f6-d9a4-42ce-908a-1b50ba367864" />
 
-Para la construccion se fabricaron las abrazaderas en un material Flexible (TPU), los soportes para el motor se fabricaron en un material rigido (PLA) y para aumentar el agarre se colocaron circulos de silicona. En la siguientes imagenes se puede ver su contruccion final.
+Para la construccion del Gripper se fabricaron las abrazaderas en un material Flexible (TPU), los soportes para el motor se fabricaron en un material rigido (PLA) y para aumentar el agarre se colocaron circulos de silicona. En la siguientes imagenes se puede ver su contruccion final.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/682cac79-6eb0-45d0-9029-a990da5a7276" width="450"/>
