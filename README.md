@@ -91,8 +91,8 @@ Para que la cámara y el robot tengan un espacio adecuado se utiliza un plano de
 Para localizar el robot, se emplean imágenes capturadas por una cámara cenital y procesadas con OpenCV en Python. No obstante, una sola fotografía no es suficiente para determinar con precisión su posición y orientación; por ello se ha diseñado una carcasa que incorpora una flecha de referencia roja, elemento clave para calcular ambos parámetros en el entorno. A continuación se muestra el robot equipado con esta carcasa y su flecha indicadora.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510" height="300"/>
-  <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" height="300"/>
+  <img src="https://github.com/user-attachments/assets/aeed0a47-6ca1-4d43-a6ca-496d6a386036" height="300"/>
+  <img src="https://github.com/user-attachments/assets/54f73173-ddf9-4020-8434-8e5a4d574110" height="300"/>
 </p>
 
 ## 📷Configuración de cámara
