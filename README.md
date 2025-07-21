@@ -206,22 +206,21 @@ Ya con los nodos definidos, se llegó a la siguiente arquitectura de ROS2
    <video src='https://github.com/user-attachments/assets/2e269eea-8fa4-4e10-8801-4226db37f44b'>
 </div>
 
+## 💔Dificultades en el proceso
 
+* Uno de los motores se sobrecalentó y terminó averiándose después de aproximadamente 15 minutos de funcionamiento continuo. Como consecuencia, el gripper dejó de operar correctamente.
 
+* El entorno del mapa presentaba condiciones de fricción que inicialmente impedían el movimiento suave del robot.
 
-## Dificultades en el proceso
+* El canal de comunicación encargado de enviar comandos de movimiento al robot se saturaba, con una duración máxima de operación continua cercana a los 4 minutos.
 
+## 🍂Autoevaluacion Grupal
 
+## 🍃Autoevaluacion Individual
 
-* se calento un motor y se daño /, lueo de 15 minutos de funcionamiento continuo se dañó, el gripper.
-* el entorno del mapa no permitia inicialmente el movimiento del robot suavement por la friccion.
-* el canal de comunicacion con el robot para su movimiento se sturaba con una duracion maxima de 4 minutos
-* 
+## 📚Bibliografía
 
-
-## Autoevaluacion Grupal
-
-## Autoevaluacion Individual
+Este proyecto no sería posible sin el desarrollo previo del Hexapodo, para mayor información del **_Hexapodo_** desarrollado por [Felipe Chaves Delgadillo](mailto:fchaves@unal.edu.co) y [Andres Camilo Torres Cajamarca](mailto:antorresca@unal.edu.co) consultar el [repositorio](https://github.com/labsir-un/Hexapod_Unal) de la organización [LabSir](https://github.com/labsir-un) de la Universidad Nacional de Colombia 
 
 ## Bibliografía
 
