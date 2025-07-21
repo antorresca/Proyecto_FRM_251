@@ -15,7 +15,7 @@ El sistema de navegación del hexápodo será asistido desde MATLAB, donde se es
 
 El sistema se implementará sobre ROS 2 Humble como middleware principal, y el control del movimiento se realizará mediante una máquina de estados o un controlador PI, según los resultados de desarrollo. La lógica de control será acoplada a rutinas previamente definidas en simulación y modificadas para adaptarse al comportamiento del entorno físico. 
 
-## Objetivos 
+## 🐾Objetivos 
 * Navegar hacia las ubicaciones de las basuras detectadas. 
 * Recoger objetos con el gripper implementado. 
 * Transportar los objetos a una de dos zonas predefinidas de descarga. 
@@ -26,7 +26,7 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * Evaluar el desempeño del sistema de manipulación y agarre bajo diferentes condiciones de prueba. 
 * Documentar todo el proceso de desarrollo y pruebas para retroalimentación académica y técnica.
 
-## Materiales
+## 🧺Materiales
 
 * Robot hexápodo con 18 grados de libertad, basado en arquitectura compatible con ROS 2. 
 * Gripper fabricado en manufactura aditiva, acoplado a la parte frontal de hexapodo 
@@ -35,7 +35,7 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * Objetos de prueba: objetos de colores en forma de bola simulando basura. 
 * Entorno de simulación en CoppeliaSim para pruebas virtuales de las rutinas.
 
-## Herramientas de software
+## 💻Herramientas de software
 
 * Matlab
 * CoppeliaSim
@@ -43,7 +43,43 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * Autodesk Inventor
 * Python con OpenCV
 
-## Detección y localizacion con OpenCV
+# 🌀Desarrollo 
+
+## 💪Potencia eléctrica
+
+## 🖐️Diseño y construccion del Gripper
+Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre que se iba a diseñar para el robot, en primera etapa se habia determinado un tipo de garra mecánica, la cual es activada con un motor que permite la apertura o el cierre de la garra como se ve.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4e8b0913-7c3d-4a44-bd0a-2bda5537c0aa" alt=" Gripper Inicial" height="300"/>
+</p>
+
+En el proceso de diseño se nos aconsejo una opción de diseño con robotica suave para el agarre, esto con el fin de poder atrapar diferentes geometrias de "Basuras", optando finalmente por esta ultima. Realizando un nuevo diseño de gripper se tuvó en cuenta tanto la altura donde poner el gripper respecto a las "basura" que debia recoger, siendo acorde con la cinematica del robot situarlo debajo del nivel de los motores, además se ecogio una forma en la que la revolución del eje del motor 
+A continuacion se presenta el diseño de Solidworks.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/208c46f6-d9a4-42ce-908a-1b50ba367864" alt=" Gripper Inicial" height="400"/>
+</p>
+
+Para la construccion del Gripper se utilizo un motor MG90 como actuador, por otro lado, se fabricaron las abrazaderas en un material Flexible (TPU), los soportes para el motor se fabricaron en un material rigido (PLA) y para aumentar el agarre se colocaron circulos de silicona. En la siguientes imagenes se puede ver su contruccion final.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/682cac79-6eb0-45d0-9029-a990da5a7276" width="450"/>
+  <img src="https://github.com/user-attachments/assets/a8b24f57-1655-44d9-b71b-7a413b90c6a9" width="450"/>
+</p>
+
+## 🏞️Descripción del entorno
+
+## 🐢Diseño y contruccion de la carcasa
+
+Para localizar el robot, se emplean imágenes capturadas por una cámara cenital y procesadas con OpenCV en Python. No obstante, una sola fotografía no es suficiente para determinar con precisión su posición y orientación; por ello se ha diseñado una carcasa que incorpora una flecha de referencia roja, elemento clave para calcular ambos parámetros en el entorno. A continuación se muestra el robot equipado con esta carcasa y su flecha indicadora.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510" height="300"/>
+  <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" height="300"/>
+</p>
+
+## 👁️Detección y localizacion con OpenCV
 
 Para llevar a cabo la identificación y el posicionamiento de objetos, se emplearon las bibliotecas de OpenCV en Python. Se definió que los elementos a recolectar serían de color azul o verde, al igual que las áreas donde debían ubicarse. Con el fin de determinar con precisión la posición y orientación del robot, se añadió una flecha roja junto a un punto amarillo que marca su centroide. A continuación se muestra una imagen que ilustra el robot y los objetos en su zona de trabajo.
 
@@ -57,7 +93,7 @@ Una vez capturada la imagen, se procesa con OpenCV para extraer las posiciones d
   <img src="https://github.com/user-attachments/assets/efe38e93-49eb-4a55-8976-ed15f0738b1a" height="500"/>
 </p>
 
-## 📐 Generacion de Trayectorias 
+## 📐Generacion de Trayectorias 
 
 Para la genereción de trayectorias se utiliza matlab, en este caso se realizó un algoritmo que genera la trayectoria a travez del método PRM donde dependiendo del color del objeto deja como punto final la zona del respectivo color. Finalmente se envian los datos a Ros mediante el ROS toolbox de matlab .  
 <p align="center">
@@ -72,7 +108,7 @@ Para la genereción de trayectorias se utiliza matlab, en este caso se realizó 
 
 
 
-## 🎮 Control
+## 🎮Control
 
 Para el algoritmo de control, se tuvo en cuenta que el robot emplea rutinas predefinidas que por simplicidad no se modificaran para evitar rehacer la cinematica; por ello se realizó un control como una _maquina de estados discreta_, para ello se siguió el siguiente diagrama de flujo:
 
@@ -114,45 +150,56 @@ Como se puede observar, en la mayoria de los casos se logra llegar al objetivo. 
 1. El robot no puede pasar por encima del objeto. (Video 'Control a Obj=(-5,-3)')
 2. Debido al angulo y desplazamiento fijos se puede llegar a un bucle tratando de llegar al objetivo. (Video 'Control a Obj=(5,2)')
 
-Para ello, se tuvo en cuenta los siguientes datos del robot:
+Posteriormente, se realizó el calculo de avance de 1 vez la rutina de avance y de 1 vez la rutina de giro
 
+<div align='center'>
+   <img width="400"  alt="giro" src="https://github.com/user-attachments/assets/b67641f8-a6d4-499c-a243-2854e0c73753" />
+</div>
+<div align='center'>
+<img width="400"  alt="Avance" src="https://github.com/user-attachments/assets/3ebb5bca-fee1-4b23-9e5c-690723f641ef" />
+</div>
+dando
 
+* Avance: 12cm-13cm
+* Giro: 12°-12.5°
 
+Por otro lado, se determinó que las tolerancias serian de 
 
-## Diseño y construccion del Gripper
-Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre que se iba a diseñar para el robot, en primera etapa se habia determinado un tipo de garra mecánica, la cual es activada con un motor que permite la apertura o el cierre de la garra como se ve.
+* Tolerancia de distancia: 18cm (distancia entre centro del robot al centro del gripper)
+* Tolerancia de giro: 8° (minimiza la posibilidad de entrar en bucle)
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/4e8b0913-7c3d-4a44-bd0a-2bda5537c0aa" alt=" Gripper Inicial" height="300"/>
-</p>
+## 📷Configuración de cámara
 
-En el proceso de diseño se nos aconsejo una opción de diseño con robotica suave para el agarre, esto con el fin de poder atrapar diferentes geometrias de "Basuras", optando finalmente por esta ultima. Realizando un nuevo diseño de gripper se tuvó en cuenta tanto la altura donde poner el gripper respecto a las "basura" que debia recoger, siendo acorde con la cinematica del robot situarlo debajo del nivel de los motores, además se ecogio una forma en la que la revolución del eje del motor 
-A continuacion se presenta el diseño de Solidworks.
+## 🏗️ROS 2
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/208c46f6-d9a4-42ce-908a-1b50ba367864" alt=" Gripper Inicial" height="400"/>
-</p>
+Para el diseño de la arquitectura de ROS2 se tomó la ya implementada en la versión original del [Hexapodo](https://github.com/labsir-un/Hexapod_Unal)
 
-Para la construccion del Gripper se utilizo un motor MG90 como actuador, por otro lado, se fabricaron las abrazaderas en un material Flexible (TPU), los soportes para el motor se fabricaron en un material rigido (PLA) y para aumentar el agarre se colocaron circulos de silicona. En la siguientes imagenes se puede ver su contruccion final.
+<div align='center'>
+   <img src='https://github.com/labsir-un/Hexapod_Unal/blob/main/images/README/1741327637519.png'>
+</div>
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/682cac79-6eb0-45d0-9029-a990da5a7276" width="450"/>
-  <img src="https://github.com/user-attachments/assets/a8b24f57-1655-44d9-b71b-7a413b90c6a9" width="450"/>
-</p>
+A partir de esta, se modificó el funcionamiento de los siguientes nodos:
 
-## Diseño y contruccion de la carcasa
+* Gui_node: Se modificó la entrada al nodo para que otro nodo lo pudiera controlar mediante una acción llamada 'enviar_paso'
+* Transformation_node: Se modificó para evitar saturación en canales de comunicación y se le implementó seguimiento de finalización de rutina
+* Cinematica_node: Se modificó para poder determinar la cantidad $n$ de veces que se repite la rutina solicitada
 
-Para localizar el robot, se emplean imágenes capturadas por una cámara cenital y procesadas con OpenCV en Python. No obstante, una sola fotografía no es suficiente para determinar con precisión su posición y orientación; por ello se ha diseñado una carcasa que incorpora una flecha de referencia roja, elemento clave para calcular ambos parámetros en el entorno. A continuación se muestra el robot equipado con esta carcasa y su flecha indicadora.
+Con ello, se crearon los siguientes nodos:
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/406d295a-1247-445e-8f9b-c3a040782510" height="300"/>
-  <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" height="300"/>
-</p>
+* Control_node: Se encarga del seguimiento de trayectoria. Se le implementa la lógica descrita en la sección [Control](#-control)
+* Gripper_node: Realiza el movimiento del gripper por medio de los pines GPIO de la RaspBerry Pi.
+* Vision_node: Encargado de la toma de imagenes con la cámara y el analisis de las mismas para detección de objetos, entorno y pose del robot.
+* Planner_node: Nodo que realiza la coordinación de la secuencia.
 
+Por otro lado, se configuró ROS2 para ejecución en red, esto con el fin de disminuir la carga computacional de la RaspBerry Pi ubicada en el robot, por lo cual, en ella solo corren los nodos _Dynamixel\_node_ y _Gripper\_node_, el resto de nodos corren de manera local en un pc con los requerimientos descritos en la sección del repositorio original '[Using Laptop](https://github.com/labsir-un/Hexapod_Unal?tab=readme-ov-file#using-laptop)'
 
+Ya con los nodos definidos, se llegó a la siguiente arquitectura de ROS2
 
+<div align='center'>
+   <img width="3996" height="1841" alt="Blank diagram - Page 16 (5)" src="https://github.com/user-attachments/assets/0ddb9717-1ffc-400d-bb8f-d5e12a58a9d8" />
+</div>
 
-### Videos
+## 📽️Videos
 
 
 <div align ='center'>
