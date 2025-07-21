@@ -42,6 +42,21 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * ROS 2
 * Autodesk Inventor
 * Python con OpenCV
+
+## Detección y localizacion con OpenCV
+
+Para llevar a cabo la identificación y el posicionamiento de objetos, se emplearon las bibliotecas de OpenCV en Python. Se definió que los elementos a recolectar serían de color azul o verde, al igual que las áreas donde debían ubicarse. Con el fin de determinar con precisión la posición y orientación del robot, se añadió una flecha roja junto a un punto amarillo que marca su centroide. A continuación se muestra una imagen que ilustra el robot y los objetos en su zona de trabajo.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9ffaab6a-804f-4eeb-b121-3da8a92553b5" height="400"/>
+</p>
+
+Una vez capturada la imagen, se procesa con OpenCV para extraer las posiciones de los objetos y del robot. Para ello, se aplican máscaras de color verde, azul y amarillo que permiten segmentar las áreas ocupadas por cada objeto y calcular sus centroides. De forma análoga, se utiliza una máscara roja para identificar la flecha del robot y, a partir de ella, determinar su orientación. La siguiente imagen ilustra tanto la detección de los centroides de los objetos como la localización y dirección del robot.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/efe38e93-49eb-4a55-8976-ed15f0738b1a" height="500"/>
+</p>
+
 ## 📐 Generacion de Trayectorias 
 
 Para la genereción de trayectorias se utiliza matlab, en este caso se realizó un algoritmo que genera la trayectoria a travez del método PRM donde dependiendo del color del objeto deja como punto final la zona del respectivo color. Finalmente se envian los datos a Ros mediante el ROS toolbox de matlab .  
@@ -134,19 +149,7 @@ Para localizar el robot, se emplean imágenes capturadas por una cámara cenital
   <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" height="300"/>
 </p>
 
-## Detección y localizacion con OpenCV
 
-Para llevar a cabo la identificación y el posicionamiento de objetos, se emplearon las bibliotecas de OpenCV en Python. Se definió que los elementos a recolectar serían de color azul o verde, al igual que las áreas donde debían ubicarse. Con el fin de determinar con precisión la posición y orientación del robot, se añadió una flecha roja junto a un punto amarillo que marca su centroide. A continuación se muestra una imagen que ilustra el robot y los objetos en su zona de trabajo.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/9ffaab6a-804f-4eeb-b121-3da8a92553b5" height="400"/>
-</p>
-
-Una vez capturada la imagen, se procesa con OpenCV para extraer las posiciones de los objetos y del robot. Para ello, se aplican máscaras de color verde, azul y amarillo que permiten segmentar las áreas ocupadas por cada objeto y calcular sus centroides. De forma análoga, se utiliza una máscara roja para identificar la flecha del robot y, a partir de ella, determinar su orientación. La siguiente imagen ilustra tanto la detección de los centroides de los objetos como la localización y dirección del robot.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/efe38e93-49eb-4a55-8976-ed15f0738b1a" height="500"/>
-</p>
 
 
 ### Videos
