@@ -61,6 +61,12 @@ La versión 1.0 del Hexapodo tenia implementado una placa U2D2 que tiene una cor
   <img src="https://github.com/user-attachments/assets/7e914c75-8308-4208-bcfe-40ab6f21f30d" alt="Cambio de la tarjeta por HUB" height="300"/>
 </p>
 
+Para ello, se adaptaron los cables de conexión:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a4b852f4-ebe2-4844-bc91-2b931578524c" alt="Cambio de la tarjeta por HUB" height="300"/>
+</p>
+
 ## 🖐️Diseño y construccion del Gripper
 Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre que se iba a diseñar para el robot, en primera etapa se habia determinado un tipo de garra mecánica, la cual es activada con un motor que permite la apertura o el cierre de la garra como se ve.
 
