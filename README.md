@@ -86,6 +86,10 @@ Para la construccion del Gripper se utilizo un motor MG90 como actuador, por otr
 Para que la cámara y el robot tengan un espacio adecuado se utiliza un plano de color blanco el cual tiene dos zonas coloreadas para separar los objetos de acuerdo a su color (Azul y Verde). Este plano tiene medidas de 101 cm x 204 cm y las zonas donde se ubican los elementos separados son de 30 cm x 54 cm cada una.
 
 
+<p align="center">
+<img width="1733" height="969" alt="image" src="https://github.com/user-attachments/assets/779bc503-5f9f-464f-90c5-b783dacf6f65" />
+</p>
+
 ## 🐢Diseño y contruccion de la carcasa
 
 Para localizar el robot, se emplean imágenes capturadas por una cámara cenital y procesadas con OpenCV en Python. No obstante, una sola fotografía no es suficiente para determinar con precisión su posición y orientación; por ello se ha diseñado una carcasa que incorpora una flecha de referencia roja, elemento clave para calcular ambos parámetros en el entorno. A continuación se muestra el robot equipado con esta carcasa y su flecha indicadora.
