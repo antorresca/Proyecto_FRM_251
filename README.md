@@ -116,7 +116,7 @@ Para la construccion del Gripper se fabricaron las abrazaderas en un material Fl
   <img src="https://github.com/user-attachments/assets/a8b24f57-1655-44d9-b71b-7a413b90c6a9" width="450"/>
 </p>
 
-## Diseño y ccontruccion de la carcasa
+## Diseño y contruccion de la carcasa
 
 Para localizar el robot, se emplean imágenes capturadas por una cámara cenital y procesadas con OpenCV en Python. No obstante, una sola fotografía no es suficiente para determinar con precisión su posición y orientación; por ello se ha diseñado una carcasa que incorpora una flecha de referencia roja, elemento clave para calcular ambos parámetros en el entorno. A continuación se muestra el robot equipado con esta carcasa y su flecha indicadora.
 
@@ -125,9 +125,22 @@ Para localizar el robot, se emplean imágenes capturadas por una cámara cenital
   <img src="https://github.com/user-attachments/assets/55c79690-7ed1-402e-a88f-dccb829fa920" height="300"/>
 </p>
 
-## Detección de objetos y el robot con OpenCV
+## Detección y localizacion con OpenCV
+
+Para llevar a cabo la identificación y el posicionamiento de objetos, se emplearon las bibliotecas de OpenCV en Python. Se definió que los elementos a recolectar serían de color azul o verde, al igual que las áreas donde debían ubicarse. Con el fin de determinar con precisión la posición y orientación del robot, se añadió una flecha roja junto a un punto amarillo que marca su centroide. A continuación se muestra una imagen que ilustra el robot y los objetos en su zona de trabajo.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9ffaab6a-804f-4eeb-b121-3da8a92553b5" height="300"/>
+</p>
+
+Una vez capturada la imagen, se procesa con OpenCV para extraer las posiciones de los objetos y del robot. Para ello, se aplican máscaras de color verde, azul y amarillo que permiten segmentar las áreas ocupadas por cada objeto y calcular sus centroides. De forma análoga, se utiliza una máscara roja para identificar la flecha del robot y, a partir de ella, determinar su orientación. La siguiente imagen ilustra tanto la detección de los centroides de los objetos como la localización y dirección del robot.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4033d42c-bde5-4daa-bd17-7d0e0bd0cdb4" height="300"/>
+</p>
 
 ### Videos
+
 
 <div align ='center'>
    <video src='https://github.com/user-attachments/assets/2e269eea-8fa4-4e10-8801-4226db37f44b'>
