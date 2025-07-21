@@ -108,6 +108,10 @@ Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre
 </p>
 
 En el proceso de diseño se nos aconsejo una opción de diseño con robotica suave para el agarre, esto con el fin de poder atrapar diferentes geometrias de "Basuras", optando finalmente por esta ultima. Realizando un nuevo diseño de gripper se tuvó en cuenta tanto la altura donde poner el gripper respecto a las "basura" que debia recoger, siendo acorde con la cinematica del robot situarlo debajo del nivel de los motores, además se ecogio una forma en la que la revolución del eje del motor 
+A continuacion se presenta el diseño de Solidworks.
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/208c46f6-d9a4-42ce-908a-1b50ba367864" />
+
+Para la construccion se fabricaron las abrazaderas en un material Flexible (TPU), los soportes para el motor se fabricaron en un material rigido (PLA) y para aumentar el agarre se colocaron circulos de silicona. En la siguientes imagenes se puede ver su contruccion final.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/682cac79-6eb0-45d0-9029-a990da5a7276" width="450"/>
