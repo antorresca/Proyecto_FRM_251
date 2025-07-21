@@ -112,7 +112,7 @@ A continuacion se presenta el diseño de Solidworks.
   <img src="https://github.com/user-attachments/assets/208c46f6-d9a4-42ce-908a-1b50ba367864" alt=" Gripper Inicial" height="400"/>
 </p>
 
-Para la construccion del Gripper se fabricaron las abrazaderas en un material Flexible (TPU), los soportes para el motor se fabricaron en un material rigido (PLA) y para aumentar el agarre se colocaron circulos de silicona. En la siguientes imagenes se puede ver su contruccion final.
+Para la construccion del Gripper se utilizo un motor MG90 como actuador, por otro lado, se fabricaron las abrazaderas en un material Flexible (TPU), los soportes para el motor se fabricaron en un material rigido (PLA) y para aumentar el agarre se colocaron circulos de silicona. En la siguientes imagenes se puede ver su contruccion final.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/682cac79-6eb0-45d0-9029-a990da5a7276" width="450"/>
@@ -139,8 +139,9 @@ Para llevar a cabo la identificación y el posicionamiento de objetos, se emplea
 Una vez capturada la imagen, se procesa con OpenCV para extraer las posiciones de los objetos y del robot. Para ello, se aplican máscaras de color verde, azul y amarillo que permiten segmentar las áreas ocupadas por cada objeto y calcular sus centroides. De forma análoga, se utiliza una máscara roja para identificar la flecha del robot y, a partir de ella, determinar su orientación. La siguiente imagen ilustra tanto la detección de los centroides de los objetos como la localización y dirección del robot.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/892240dc-9091-489f-9c3f-ad26bb964ce" height="400"/>
+  <img src="https://github.com/user-attachments/assets/efe38e93-49eb-4a55-8976-ed15f0738b1a" height="500"/>
 </p>
+
 
 ### Videos
 
