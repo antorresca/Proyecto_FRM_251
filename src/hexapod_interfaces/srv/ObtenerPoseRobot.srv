@@ -1,0 +1,4 @@
+---
+float32 x #Coordenada en x en metros
+float32 y  #Coordenada en y en metros
+float32 angle #Angulo en grados

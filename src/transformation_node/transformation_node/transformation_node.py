@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
 from std_msgs.msg import String
-from std_srvs.srv import Trigger
+from std_srvs.srv import Trigger, Empty
 from hexapod_interfaces.srv import Activar, SiguientePosicion
 from hexapod_interfaces.action import Posicionar
 import math
@@ -31,6 +31,10 @@ class TransformationNode(Node):
 
         self.srv_activar = self.create_service(Activar, 'activar', self.service_callback)
         self.srv_sim = self.create_service(Trigger, 'modo_simulacion', self.simulacion_callback)
+        self.cli_activar = self.create_client(Empty, 'activar_control')
+
+        while not self.cli_activar.wait_for_service(timeout_sec=2.0):
+            self.get_logger().warn('Esperando el servicio "activar_control"...')
 
 
     def simulacion_callback(self, request, response):
@@ -77,6 +81,18 @@ class TransformationNode(Node):
                     self.get_logger().warn("Posición final repetida múltiples veces. Deteniendo ciclo.")
                     self.flag = False
                     self.ejecutando = False
+                    req = Empty.Request()
+                    future = self.cli_activar.call_async(req)
+
+                    rclpy.spin_until_future_complete(self, future, timeout_sec=5.0)
+
+                    if future.done():
+                        if future.result() is not None:
+                            self.get_logger().info("Servicio 'activar' llamado correctamente.")
+                        else:
+                            self.get_logger().error("Error en la llamada al servicio 'activar'.")
+                    else:
+                        self.get_logger().error("No se recibió respuesta del servicio 'activar'.")
                     return
             else:
                 self.repeticiones = 0

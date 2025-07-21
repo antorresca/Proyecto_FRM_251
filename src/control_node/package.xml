@@ -9,9 +9,10 @@
 
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
-  <depend>geometry_msgs</depend>
-  <depend>vision_node</depend>
-  <depend>numpy</depend>
+
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
@@ -22,3 +23,4 @@
     <build_type>ament_python</build_type>
   </export>
 </package>
+

@@ -19,6 +19,7 @@ class CinematicaNode(Node):
         
         self.q = None  # Inicializa la trayectoria como None
         self.max = 0   # Tamaño de la trayectoria
+        self.mode = 0
 
     def action_callback(self, goal_handle):
         """Calcula la trayectoria y devuelve el resultado."""
@@ -26,9 +27,9 @@ class CinematicaNode(Node):
         
         feedback = Calcular.Feedback()
         result = Calcular.Result()
-        mode = goal_handle.request.indicacion
+        self.mode = goal_handle.request.indicacion
         
-        if  mode >= 0:
+        if  self.mode >= 0:
             self.q = self.calcular_trayectoria()
             self.max = len(self.q[1]) if self.q is not None else 0
             
@@ -42,7 +43,7 @@ class CinematicaNode(Node):
             self.get_logger().warning("Solicitud de trayectoria inválida.")
             result.flag = False
 
-        match mode:
+        match self.mode:
             case 1:
                 self.get_logger().warn("Trayectoria recta")
                 pass
@@ -50,6 +51,7 @@ class CinematicaNode(Node):
                 self.get_logger().warn("Trayectoria giro izquierda")
                 for i in range(1, 6, 2):
                     self.q[3 * i - 3, :] = -self.q[3 * i - 3, :]
+                #self.max = self.max//2
             case 3:
                 self.get_logger().warn("Trayectoria giro derecha")
                 for i in range(2, 7, 2):
@@ -73,7 +75,7 @@ class CinematicaNode(Node):
             response.positions = []
             return response
 
-        if request.index < 3*self.max:
+        if request.index < self.max:
             index = request.index % self.max
         else:
             index = self.max - 1  # Última configuración
@@ -97,7 +99,7 @@ class CinematicaNode(Node):
             q2 = -np.degrees(
                 np.arccos(((np.sqrt(x**2 + y**2) - L1) ** 2 + z ** 2 + L2 ** 2 - L3 ** 2) / 
                 (2 * L2 * np.sqrt((np.sqrt(x**2 + y**2) - L1) ** 2 + z ** 2))
-            ) + np.arctan2(z, np.sqrt(x**2 + y**2) - L1)) - 3
+            ) + np.arctan2(z, np.sqrt(x**2 + y**2) - L1)) + 10
             q3 = np.degrees(np.arccos((L2 ** 2 + L3 ** 2 - ((np.sqrt(x**2 + y**2) - L1) ** 2 + z ** 2)) / (2 * L2 * L3))) - 90
             q3=-q3
 

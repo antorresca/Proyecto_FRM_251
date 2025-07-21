@@ -14,10 +14,15 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/Objeto.msg"
   "action/Calcular.action"
   "action/Posicionar.action"
+  "action/EnviarPaso.action"
   "srv/Activar.srv"
   "srv/SiguientePosicion.srv"
+  "srv/CapturarImagen.srv"
+  "srv/ObtenerPoseRobot.srv"
+  "srv/ObtenerObjetos.srv"
 )
 
 if(BUILD_TESTING)
