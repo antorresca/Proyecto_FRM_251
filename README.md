@@ -46,22 +46,16 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 # 🌀Desarrollo 
 
 Basados en la versión 1.0, se inicia el proceso de desarrollo de la versión 2.0, iniciando con algunas modificaciones en cuanto a Hardware enfocadas en mejorar el andar del robot.
-
-### Hardware
-1. Se cambian las tarjetas de control del los mototes por un Hub que hace puente en las conexiones y evita que se limite la corriente que se entrega a los motores. A continuación se presenta la imagen                correspondiente a la nueva configuración de las conexiones de los motores.
-    
+1. Se realiza un cambio en la conexión de potencia para evitar limitaciones en la corriente del motor [seccion](## 💪Potencia eléctrica)   
 2. Se realiza la impresión de una carcaza que cubre los circuitoe y elementos que controlan el robot, además, peromite la ubicacióin de un indicador para el sistema de visón que indicará la orientación del         robot. A continuación se muestra una imagen de la carcaza impresa.
-    
-3. Se realiza el desarrollo de un griper, el cuál se va a encargar de sujetar la lata que se va a seleccionar de acuerdo a su color, para el desarrollo de este gripper se tomó como base la tería de gripper           flexible o adaptable a la superficie a sujetar (Soft-Gripping). Este griper diseñado se imprime en PLA y es actuado por un servomotor, el cual se ubica en la parte frontal del robot para de esta manera            hacer la sujeción de los elementos a clasificar. A contunuación el gripper y su acople al cahsis del robot hexapodo.
-
-### Software
-1. En cuanto a la progración, se cambia la forma en que se envía la información a los motores, esto con el fin de reducil el volumen de datos enviados por el canal TTL, ya que se evidenció la saturación del buffer debido a la cantidad de información enviada, teniendo en cuenta que son 18 motores y a cada uno se le envía información por el mísmo canal.
+3. Se realiza el desarrollo de un griper, el cuál se va a encargar de sujetar la lata que se va a seleccionar de acuerdo a su color, para el desarrollo de este gripper se tomó como base la tería de gripper flexible o adaptable a la superficie a sujetar (Soft-Gripping). Este griper diseñado se imprime en PLA y es actuado por un servomotor, el cual se ubica en la parte frontal del robot para de esta manera hacer la sujeción de los elementos a clasificar. A contunuación el gripper y su acople al cahsis del robot hexapodo.
+4. En cuanto a la progración, se cambia la forma en que se envía la información a los motores, esto con el fin de reducir el volumen de datos enviados por el canal TTL, ya que se evidenció la saturación del buffer debido a la cantidad de información enviada, teniendo en cuenta que son 18 motores y a cada uno se le envía información por el mísmo canal.
 
 ## 💪Potencia eléctrica
-
+La versión 1.0 del Hexapodo tenia implementado una placa U2D2 que tiene una corriente máxima de operación de 10 Amperios, teniendo en cuenta que los motores en conjunto consumen una corriente mayor, se procedió a reenplazarla por un HUB que no limita la corriente, en la sigueinte imágen se presenta la tarjeta reemplazada y el HUB en su lugar de operación dentro del robot. Esto hizo parte de las mejoras en cuanto a [seccion](#hardware)
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7e914c75-8308-4208-bcfe-40ab6f21f30d"
+  <img src="https://github.com/user-attachments/assets/7e914c75-8308-4208-bcfe-40ab6f21f30d" alt="Cambio de la tarjeta por HUB" height="300"/>
 </p>
 
 ## 🖐️Diseño y construccion del Gripper
