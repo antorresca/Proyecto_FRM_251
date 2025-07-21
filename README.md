@@ -46,13 +46,13 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 # 🌀Desarrollo 
 
 Basados en la versión 1.0, se inicia el proceso de desarrollo de la versión 2.0, iniciando con algunas modificaciones en cuanto a Hardware enfocadas en mejorar el andar del robot.
-1. Se realiza un cambio en la conexión de potencia para evitar limitaciones en la corriente del motor [💪Potencia eléctrica](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#potencia-el%C3%A9ctrica) 
-2. Se realiza la impresión de una carcaza que cubre los circuitoe y elementos que controlan el robot, además, peromite la ubicacióin de un indicador para el sistema de visón que indicará la orientación del robot. [🐢Diseño y contruccion de la carcasa](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#dise%C3%B1o-y-contruccion-de-la-carcasa)
-3. Se realiza el desarrollo de un griper, el cuál se va a encargar de sujetar la lata que se va a seleccionar de acuerdo a su color, para el desarrollo de este gripper se tomó como base la tería de gripper flexible o adaptable a la superficie a sujetar (Soft-Gripping). Este griper diseñado se imprime en PLA y es actuado por un servomotor, el cual se ubica en la parte frontal del robot para de esta manera hacer la sujeción de los elementos a clasificar. [🖐️Diseño y construccion del Gripper](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#%EF%B8%8Fdise%C3%B1o-y-construccion-del-gripper)
-4. Se instala una cámara IP la cual se ubica en la parte superior del entorno. [📷Configuración de cámara](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#configuraci%C3%B3n-de-c%C3%A1mara)
-5. Se implementa un módulo de visión de máquina que se va a encargar del la captura de imágenes y la elaboración del mapa global. [👁️Detección y localizacion con OpenCV](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#dise%C3%B1o-y-contruccion-de-la-carcasa)
-6. Utilizando técnicas de generación de trayectorias se implementa un algoritmo de navegación PRM usando Matlab. [v📐Generacion de Trayectorias](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#generacion-de-trayectorias)
-7. En cuanto a la programación, se cambia la forma en que se envía la información a los motores, esto con el fin de reducir el volumen de datos enviados por el canal TTL, ya que se evidenció la saturación del buffer debido a la cantidad de información enviada, teniendo en cuenta que son 18 motores y a cada uno se le envía información por el mísmo canal. [🎮Control](https://github.com/antorresca/Proyecto_FRM_251/edit/main/README.md#control)
+1. Se realiza un cambio en la conexión de potencia para evitar limitaciones en la corriente del motor [💪Potencia eléctrica](#potencia-el%C3%A9ctrica) 
+2. Se realiza la impresión de una carcaza que cubre los circuitoe y elementos que controlan el robot, además, peromite la ubicacióin de un indicador para el sistema de visón que indicará la orientación del robot. [🐢Diseño y contruccion de la carcasa](#dise%C3%B1o-y-contruccion-de-la-carcasa)
+3. Se realiza el desarrollo de un griper, el cuál se va a encargar de sujetar la lata que se va a seleccionar de acuerdo a su color, para el desarrollo de este gripper se tomó como base la tería de gripper flexible o adaptable a la superficie a sujetar (Soft-Gripping). Este griper diseñado se imprime en PLA y es actuado por un servomotor, el cual se ubica en la parte frontal del robot para de esta manera hacer la sujeción de los elementos a clasificar. [🖐️Diseño y construccion del Gripper](#%EF%B8%8Fdise%C3%B1o-y-construccion-del-gripper)
+4. Se instala una cámara IP la cual se ubica en la parte superior del entorno. [📷Configuración de cámara](#configuraci%C3%B3n-de-c%C3%A1mara)
+5. Se implementa un módulo de visión de máquina que se va a encargar del la captura de imágenes y la elaboración del mapa global. [👁️Detección y localizacion con OpenCV](#dise%C3%B1o-y-contruccion-de-la-carcasa)
+6. Utilizando técnicas de generación de trayectorias se implementa un algoritmo de navegación PRM usando Matlab. [v📐Generacion de Trayectorias](#generacion-de-trayectorias)
+7. En cuanto a la programación, se cambia la forma en que se envía la información a los motores, esto con el fin de reducir el volumen de datos enviados por el canal TTL, ya que se evidenció la saturación del buffer debido a la cantidad de información enviada, teniendo en cuenta que son 18 motores y a cada uno se le envía información por el mísmo canal. [🎮Control](#control)
 
 ## 💪Potencia eléctrica
 La versión 1.0 del Hexapodo tenia implementado una placa U2D2 que tiene una corriente máxima de operación de 10 Amperios, teniendo en cuenta que los motores en conjunto consumen una corriente mayor, se procedió a reenplazarla por un HUB que no limita la corriente, en la sigueinte imágen se presenta la tarjeta reemplazada y el HUB en su lugar de operación dentro del robot. Esto hizo parte de las mejoras en cuanto a [seccion](#hardware)
@@ -127,7 +127,11 @@ Para la genereción de trayectorias se utiliza matlab, en este caso se realizó 
 [//]:   <img width="400" height="300" alt="TrayectoriaBug2" src="https://github.com/user-attachments/assets/a12ad9f0-8c5d-446f-8e1a-c9a5949c8a6f" />
 [//]: </p>
 
+Para prueba offline, se realizó una prueba con un sensor vision en CoppeliaSim:
 
+<div align ='center'>
+   <video src='https://github.com/user-attachments/assets/f4cc59f9-5256-44a3-b3f2-1b54d90f1186'>
+</div>
 
 ## 🎮Control
 
@@ -215,15 +219,29 @@ Por otro lado, se configuró ROS2 para ejecución en red, esto con el fin de dis
 Ya con los nodos definidos, se llegó a la siguiente arquitectura de ROS2
 
 <div align='center'>
-   <img width="3996" height="1841" alt="Blank diagram - Page 16 (5)" src="https://github.com/user-attachments/assets/0ddb9717-1ffc-400d-bb8f-d5e12a58a9d8" />
+<img width="3996" height="1841" alt="Arquitectura_ROS" src="https://github.com/user-attachments/assets/78c853fc-cbe1-4294-847e-b89b560e081e" />
 </div>
+
+## CoppeliaSim
+
+Se creó la siguiente escena en CoppeliaSim, como base para el funcionamiento, dicha escena se encuentra en el archivo [Robot_Completo_off.ttt](vrep/Robot_Completo_off.ttt)
+
+<div align='center'>
+   <img width="1426" height="866" alt="Escena_Simulacion" src="https://github.com/user-attachments/assets/9a809218-e034-4a23-980e-131b0f1dc607" />
+</div>
+
 
 ## 📽️Videos
 
 
 <div align ='center'>
-   <video src='https://github.com/user-attachments/assets/2e269eea-8fa4-4e10-8801-4226db37f44b'>
+   <video src='https://github.com/user-attachments/assets/633802ea-49ef-4547-a2cb-4d6662b73acb'>
 </div>
+
+<div align ='center'>
+   <video src='https://github.com/user-attachments/assets/947bb8c3-d565-4bb7-aaa4-40f83d039cd8'>
+</div>
+
 
 ## 💔Dificultades en el proceso
 
