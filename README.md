@@ -61,14 +61,14 @@ Basados en la versión 1.0, se inicia el proceso de desarrollo de la versión 2.
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d1f1ed8e-09e9-4745-b05c-a510ba3f5eb6"
+  <img src="https://github.com/user-attachments/assets/7e914c75-8308-4208-bcfe-40ab6f21f30d"
 </p>
 
 ## 🖐️Diseño y construccion del Gripper
 Comenzando con el desarrollo del proyecto, se tuvo a discusion el tipo de agarre que se iba a diseñar para el robot, en primera etapa se habia determinado un tipo de garra mecánica, la cual es activada con un motor que permite la apertura o el cierre de la garra como se ve.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7e914c75-8308-4208-bcfe-40ab6f21f30d" alt=" Gripper Inicial" height="300"/>
+  <img src="https://github.com/user-attachments/assets/4e8b0913-7c3d-4a44-bd0a-2bda5537c0aa" alt=" Gripper Inicial" height="300"/>
 </p>
 
 En el proceso de diseño se nos aconsejo una opción de diseño con robotica suave para el agarre, esto con el fin de poder atrapar diferentes geometrias de "Basuras", optando finalmente por esta ultima. Realizando un nuevo diseño de gripper se tuvó en cuenta tanto la altura donde poner el gripper respecto a las "basura" que debia recoger, siendo acorde con la cinematica del robot situarlo debajo del nivel de los motores, además se ecogio una forma en la que la revolución del eje del motor 
