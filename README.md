@@ -61,7 +61,7 @@ Basados en la versión 1.0, se inicia el proceso de desarrollo de la versión 2.
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d1f1ed8e-09e9-4745-b05c-a510ba3f5eb6)
+  <img src="https://github.com/user-attachments/assets/d1f1ed8e-09e9-4745-b05c-a510ba3f5eb6"
 </p>
 
 ## 🖐️Diseño y construccion del Gripper
