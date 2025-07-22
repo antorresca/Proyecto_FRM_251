@@ -12,16 +12,9 @@ def generate_launch_description():
             arguments=['--ros-args', '--log-level', 'fatal']
         ),
         Node(
-            package='transformation_node',
-            executable='transformation_node',
-            name='transformation',
-            output='screen',
-            arguments=['--ros-args', '--log-level', 'fatal']
-        ),
-        Node(
-            package='cinematica_node',
-            executable='cinematica_node',
-            name='cinematica',
+            package='gripper_node',
+            executable='gripper_node',
+            name='gripper',
             output='screen',
             arguments=['--ros-args', '--log-level', 'fatal']
         )

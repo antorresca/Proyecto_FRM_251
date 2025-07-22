@@ -53,7 +53,8 @@ class GuiClient(Node):
             self.get_logger().warn(future.result().message)
 
     def configurar_modo(self):
-        sim_input = input("¿Activar modo simulación? (true/false): ").strip().lower()
+        #sim_input = input("¿Activar modo simulación? (true/false): ").strip().lower()
+        sim_input = "false"
         if sim_input == "true":
             req = Trigger.Request()
             future = self.cli_sim.call_async(req)

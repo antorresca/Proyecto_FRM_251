@@ -17,6 +17,7 @@ class PlannerNode(Node):
         self.indice_actual = 0
         self.estado = 'objetivo'
         self.ultimo_color = None
+        self.ultimo_punto_publicado = None  # NUEVO: almacena el último punto publicado
         self.esperando_objetos = False
 
         self.zonas = {
@@ -25,11 +26,11 @@ class PlannerNode(Node):
         }
 
         self.get_logger().info('planner_node listo')
-        self.elegir_objetivo()  # Solo se llama una vez al iniciar
+        self.elegir_objetivo()
 
     def elegir_objetivo(self):
         if self.esperando_objetos:
-            return  # Ya hay una solicitud en curso
+            return
 
         if not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().warn('Servicio "get_objetos_detectados" no disponible')
@@ -81,25 +82,38 @@ class PlannerNode(Node):
         return response
 
     def publicar_siguiente(self):
+        punto = None
+
         if self.estado == 'objetivo':
             if self.indice_actual < len(self.objetos_ordenados):
                 obj = self.objetos_ordenados[self.indice_actual]
                 punto = Point(x=obj.x, y=obj.y, z=0.0)
-                self.publisher.publish(punto)
-                self.get_logger().info(f'Objeto enviado: x={obj.x:.2f}, y={obj.y:.2f}, color={obj.color}')
+                self.get_logger().info(f'Objeto seleccionado: x={obj.x:.2f}, y={obj.y:.2f}, color={obj.color}')
                 self.ultimo_color = obj.color
-                self.activar_gripper()
             else:
                 self.get_logger().info('No hay más objetos disponibles. Reintentando detección...')
                 self.elegir_objetivo()
+                return
+
         elif self.estado == 'zona':
             if self.ultimo_color in self.zonas:
                 punto = self.zonas[self.ultimo_color]
-                self.publisher.publish(punto)
-                self.get_logger().info(f'Zona enviada para color {self.ultimo_color}')
-                self.activar_gripper()
+                self.get_logger().info(f'Zona seleccionada para color {self.ultimo_color}')
             else:
                 self.get_logger().warn('Color desconocido, no se puede enviar zona.')
+                return
+
+        # Verifica si el punto ya fue publicado
+        if self.ultimo_punto_publicado and \
+           abs(self.ultimo_punto_publicado.x - punto.x) < 1e-3 and \
+           abs(self.ultimo_punto_publicado.y - punto.y) < 1e-3:
+            self.get_logger().warn('Punto ya fue publicado, evitando duplicado.')
+            return
+
+        # Publica si es diferente
+        self.publisher.publish(punto)
+        self.ultimo_punto_publicado = punto  # Actualiza el último punto
+        self.activar_gripper()
 
     def activar_gripper(self):
         if not self.gripper_cli.wait_for_service(timeout_sec=1.0):

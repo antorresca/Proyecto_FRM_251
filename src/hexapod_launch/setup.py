@@ -11,6 +11,8 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch',['launch/hexapod_launch.py'] ),
+        ('share/' + package_name + '/launch',['launch/pc_launch_manual.py'] ),
+        ('share/' + package_name + '/launch',['launch/pc_launch.py'] ),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
