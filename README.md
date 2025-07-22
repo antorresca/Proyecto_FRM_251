@@ -1,4 +1,17 @@
-# 🦂Proyecto Fundamentos de Robótica Movil - Hexapodo v2.0
+# 🦂Hexapodo v2.0
+
+<div align='center'>
+      <img src="https://github.com/user-attachments/assets/ee060fb8-cf1f-4fa6-b386-5f3007993c33" 
+           alt="Escudo UNAL" 
+           width=250>
+</div>
+
+<div align='center'>
+<img height=81 alt="Labsir" src="https://github.com/user-attachments/assets/3f5e741c-7bea-499d-9fa0-f12478ccbe7b" />
+<img height=81 alt="LabFabEx" src="https://github.com/user-attachments/assets/77483182-adc5-46f4-ab25-711136e970ea" />
+<img height=36 alt="UN-Robot" src="https://github.com/user-attachments/assets/50c1c078-2a3d-44d3-af94-24870824fa9f" />
+</div>
+
 
 ## 🪶Autores
 
@@ -7,6 +20,11 @@
 * Julian Andres Gonzalez Reina
 * Emily Angelica Villanueva Serna
 * Elvin Andres Corredor Torres
+
+## 👨‍🏫Docentes
+
+* Ph.D. Ing. Ricardo Emiro Ramírez Heredia
+* Ph.D. Ing. Pedro Fabián Cárdenas Herrera
 
 ## ℹ️Descripción
 El presente proyecto propone el desarrollo de un sistema robótico móvil orientado a la recolección de objetos identificados como “basuras” (objetos de colores con forma de cilindro) distribuidos aleatoriamente en un entorno delimitado. El agente principal es un robot hexápodo con 18 grados de libertad, el cual contará con un sistema de visión artificial basado en una cámara cenital que permite la localización tanto del robot como de los residuos mediante técnicas de procesamiento de imagen.
