@@ -8,8 +8,7 @@ def generate_launch_description():
             package='dynamixel_node',
             executable='dynamixel_node',
             name='dynamixel',
-            output='screen',
-            arguments=['--ros-args', '--log-level', 'fatal']
+            output='screen'
         ),
         Node(
             package='gripper_node',

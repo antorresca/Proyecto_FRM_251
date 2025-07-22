@@ -29,8 +29,7 @@ def generate_launch_description():
             package='gui_node',
             executable='gui_client',
             name='gui',
-            output='screen',
-            arguments=['--ros-args', '--log-level', 'fatal']
+            output='screen'
         ),
         Node(
             package='vision_node',
