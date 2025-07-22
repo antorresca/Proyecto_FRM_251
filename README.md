@@ -9,11 +9,11 @@
 * Elvin Andres Corredor Torres
 
 ## ℹ️Descripción
-El presente proyecto propone el desarrollo de un sistema robótico móvil orientado a la recolección de objetos identificados como “basuras” (objetos de colores en forma de bola) distribuidos aleatoriamente en un entorno delimitado. El agente principal es un robot hexápodo con 18 grados de libertad, el cual contará con un sistema de visión artificial basado en una cámara cenital que permite la localización tanto del robot como de los residuos mediante técnicas de procesamiento de imagen.
+El presente proyecto propone el desarrollo de un sistema robótico móvil orientado a la recolección de objetos identificados como “basuras” (objetos de colores con forma de cilindro) distribuidos aleatoriamente en un entorno delimitado. El agente principal es un robot hexápodo con 18 grados de libertad, el cual contará con un sistema de visión artificial basado en una cámara cenital que permite la localización tanto del robot como de los residuos mediante técnicas de procesamiento de imagen.
 
-El sistema de navegación del hexápodo será asistido desde MATLAB, donde se establecerán las trayectorias hacia los puntos objetivo. Una vez en proximidad de una basura, el robot ejecutará una rutina de manipulación utilizando un gripper desarrollado en manufactura aditiva. Los objetos recogidos serán transportados a dos regiones definidas de recolección, donde se completará la tarea asignada.
+El sistema de navegación del hexápodo será asistido desde MatLab migrado a Python, donde se establecerán las trayectorias hacia los puntos objetivo. Una vez en proximidad de una basura, el robot ejecutará una rutina de manipulación utilizando un gripper desarrollado en manufactura aditiva. Los objetos recogidos serán transportados a dos regiones definidas de recolección, donde se completará la tarea asignada.
 
-El sistema se implementará sobre ROS 2 Humble como middleware principal, y el control del movimiento se realizará mediante una máquina de estados o un controlador PI, según los resultados de desarrollo. La lógica de control será acoplada a rutinas previamente definidas en simulación y modificadas para adaptarse al comportamiento del entorno físico. 
+El sistema se implementará sobre ROS 2 Humble como middleware principal, y el control del movimiento se realizará mediante una máquina de estados, según los resultados de desarrollo. La lógica de control será acoplada a rutinas previamente definidas en simulación y modificadas para adaptarse al comportamiento del entorno físico. 
 
 ## 🐾Objetivos 
 * Navegar hacia las ubicaciones de las basuras detectadas. 
@@ -22,8 +22,7 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * Implementar un sistema de visión artificial con cámara fija cenital para:
     * Localizar en tiempo real la posición del robot (odometría por visión). 
     * Detectar la posición de los residuos (objetos de colores).
-* Integrar la visión con el entorno de control en MATLAB para generar trayectorias. 
-* Evaluar el desempeño del sistema de manipulación y agarre bajo diferentes condiciones de prueba. 
+* Integrar la visión con el entorno de control en con algoritmos migrados desde MATLAB para generar trayectorias. 
 * Documentar todo el proceso de desarrollo y pruebas para retroalimentación académica y técnica.
 
 ## 🧺Materiales
@@ -31,19 +30,19 @@ El sistema se implementará sobre ROS 2 Humble como middleware principal, y el c
 * Robot hexápodo con 18 grados de libertad, basado en arquitectura compatible con ROS 2. 
 * Gripper fabricado en manufactura aditiva, acoplado a la parte frontal de hexapodo 
 * Cámara cenital de alta resolución para captura del entorno. 
-* Computador con ROS 2 Humble y MATLAB instalados para ejecución de control y visión. 
+* Computador con ROS 2 Humble instalados para ejecución de control y visión. (Ver '[Using Laptop](https://github.com/labsir-un/Hexapod_Unal?tab=readme-ov-file#using-laptop)')
 * Objetos de prueba: objetos de colores en forma de bola simulando basura. 
-* Entorno de simulación en CoppeliaSim para pruebas virtuales de las rutinas.
+* Entorno de simulación en CoppeliaSim para pruebas seguras.
 
 ## 💻Herramientas de software
 
 * Matlab
 * CoppeliaSim
-* ROS 2
+* ROS 2 Humble
 * Autodesk Inventor
 * Python con OpenCV
 
-# 🌀Desarrollo 
+# 🌀Desarrollo
 
 Basados en la versión 1.0, se inicia el proceso de desarrollo de la versión 2.0, iniciando con algunas modificaciones en cuanto a Hardware enfocadas en mejorar el andar del robot.
 1. Se realiza un cambio en la conexión de potencia para evitar limitaciones en la corriente del motor [💪Potencia eléctrica](#potencia-el%C3%A9ctrica) 
@@ -55,7 +54,7 @@ Basados en la versión 1.0, se inicia el proceso de desarrollo de la versión 2.
 7. En cuanto a la programación, se cambia la forma en que se envía la información a los motores, esto con el fin de reducir el volumen de datos enviados por el canal TTL, ya que se evidenció la saturación del buffer debido a la cantidad de información enviada, teniendo en cuenta que son 18 motores y a cada uno se le envía información por el mísmo canal. [🎮Control](#control)
 
 ## 💪Potencia eléctrica
-La versión 1.0 del Hexapodo tenia implementado una placa U2D2 que tiene una corriente máxima de operación de 10 Amperios, teniendo en cuenta que los motores en conjunto consumen una corriente mayor, se procedió a reenplazarla por un HUB que no limita la corriente, en la sigueinte imágen se presenta la tarjeta reemplazada y el HUB en su lugar de operación dentro del robot. Esto hizo parte de las mejoras en cuanto a [seccion](#hardware)
+La versión 1.0 del Hexapodo tenia implementado una [Power Hub Board](https://emanual.robotis.com/docs/en/parts/interface/u2d2_power_hub/) con un [U2D2](https://emanual.robotis.com/docs/en/parts/interface/u2d2/) que tiene una corriente máxima de operación de 10 Amperios, teniendo en cuenta que los motores en conjunto consumen una corriente mayor, se procedió a reenplazarla por un HUB que no limita la corriente, en la sigueinte imágen se presenta la tarjeta reemplazada y el HUB en su lugar de operación dentro del robot. Esto hizo parte de las mejoras en cuanto a Hardware.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7e914c75-8308-4208-bcfe-40ab6f21f30d" alt="Cambio de la tarjeta por HUB" height="300"/>
@@ -134,10 +133,10 @@ Para la genereción de trayectorias se utiliza matlab, en este caso se realizó 
    <img width="400" height="300" alt="TrayectoriaPRM2" src="https://github.com/user-attachments/assets/f6ed62d4-172b-43d6-8d8f-245d87bced2d" />
 </p>
 
-[//]: <p align="center">
-[//]:   <img width="400" height="300" alt="TrayectoriaBug" src="https://github.com/user-attachments/assets/4dbe2f8a-6b45-43f5-b44d-b5ee3519dcab" />
-[//]:   <img width="400" height="300" alt="TrayectoriaBug2" src="https://github.com/user-attachments/assets/a12ad9f0-8c5d-446f-8e1a-c9a5949c8a6f" />
-[//]: </p>
+<p align="center">
+  <img width="400" height="300" alt="TrayectoriaBug" src="https://github.com/user-attachments/assets/4dbe2f8a-6b45-43f5-b44d-b5ee3519dcab" />
+  <img width="400" height="300" alt="TrayectoriaBug2" src="https://github.com/user-attachments/assets/a12ad9f0-8c5d-446f-8e1a-c9a5949c8a6f" />
+</p>
 
 Para prueba offline, se realizó una prueba con un sensor vision en CoppeliaSim:
 
