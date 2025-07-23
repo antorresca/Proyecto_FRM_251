@@ -281,12 +281,27 @@ Se creó la siguiente escena en CoppeliaSim, como base para el funcionamiento, d
 * El canal de comunicación encargado de enviar comandos de movimiento al robot se saturaba, con una duración máxima de operación continua cercana a los 4 minutos.
 
 ## 🍂Autoevaluacion Grupal
-El resultado de los laboratorios y proyecto final son el reflejo de la organización, dedicación y esfuerzo del grupo, el desarrollo de las actividades propuestas transcurrió en total armonía, y el acople de los participantes del grupo fue muy orgánico, cada integrante demostró la disposición para trabajar y sacar adelante cada actividad que hacía parte del objetivo general. La adquisieción de nuevas habilidades y conocimiento como herramientas para la solución de diferentes problemas de ingeniería, son el complemento a un cohesionado trabajo en equipo y el logro de los objetivos propuestos. Muchas gracias compañeros. **Juan Camilo Gomez Robayo**
+
+Como grupo, logramos desarrollar un hexápodo capaz de seguir trayectorias, recoger objetos y dejarlos en zonas específicas, cumpliendo de manera exitosa con los objetivos planteados. El resultado de los laboratorios y del proyecto final refleja la organización, dedicación y esfuerzo constante del equipo. La distribución de tareas fue adecuada y equilibrada, lo que, junto con una comunicación efectiva y una disposición constante por parte de todos los integrantes, permitió que el desarrollo de las actividades transcurriera en total armonía. El acople entre los participantes fue natural y orgánico, lo que favoreció un ambiente de colaboración genuina y trabajo fluido. A lo largo del proceso, no solo se alcanzaron los resultados técnicos esperados, sino que también se adquirieron nuevas habilidades y conocimientos aplicables a la solución de problemas de ingeniería, consolidando un equipo cohesionado y comprometido con el aprendizaje y la mejora continua.
 
 ## 🍃Autoevaluacion Individual
-Personalmente, siento que he logrado un gran avance en los conocimientos adquiridos a lo largo del curso, los cuales se reflejan en el desarrollo de este proyecto, donde fue necesario integrar cada uno de los temas abordados en clase con ROS 2. Aunque ROS comparte ciertas similitudes con ROS 2, adaptarse a esta nueva versión fue uno de los mayores retos, ya que nunca antes había tenido la oportunidad de trabajar con ella. -- Julian Gonzalez 
 
-Cada jornada de trabajo en búsqueda de soluciones a los retos que se presentaban en el desarrollo del proyecto, resultaba en un intercambio de perspectivas que enriquecían los conceptos enseñados a lo largo del curso y demandaba habilidades adicionales adquiridas con la experiencia y la academia. Todo esto aporto de manera significativa en el afianzamiento del conocimineto y su aplicación al desarrollo de problematicas reales dentro de un desarrollo como lo fue este proyecto. Siento que adquirí nuevas habilidades y conocimiento lo que me genera entusiamo y ganas se continuar la profundización en el estudio de la robótica móvil. **Juan Camilo Gomez Robayo**
+**Andres Camilo Torres Cajamarca**
+
+Durante el proyecto, adquirí nuevos conocimientos sobre el funcionamiento, control y aplicaciones de los robots móviles, lo que me permitió comprender mejor su integración en tareas autónomas. Además, fortalecí mis habilidades de trabajo en equipo, especialmente en la división de tareas y la comunicación efectiva. Tuve la oportunidad de trabajar directamente con visión por computador, lo que me permitió entender de manera práctica el procesamiento de imágenes para la detección y análisis de información visual. Finalmente, amplié significativamente mi conocimiento de ROS 2, profundizando en la creación de nodos, servicios y acciones dentro de arquitecturas robóticas distribuidas.
+
+**Juan Camilo Gomez Robayo**
+
+Cada jornada de trabajo en búsqueda de soluciones a los retos que se presentaban en el desarrollo del proyecto, resultaba en un intercambio de perspectivas que enriquecían los conceptos enseñados a lo largo del curso y demandaba habilidades adicionales adquiridas con la experiencia y la academia. Todo esto aporto de manera significativa en el afianzamiento del conocimineto y su aplicación al desarrollo de problematicas reales dentro de un desarrollo como lo fue este proyecto. Siento que adquirí nuevas habilidades y conocimiento lo que me genera entusiamo y ganas se continuar la profundización en el estudio de la robótica móvil.
+
+**Julian Andres Gonzalez Reina**
+
+Personalmente, siento que he logrado un gran avance en los conocimientos adquiridos a lo largo del curso, los cuales se reflejan en el desarrollo de este proyecto, donde fue necesario integrar cada uno de los temas abordados en clase con ROS 2. Aunque ROS comparte ciertas similitudes con ROS 2, adaptarse a esta nueva versión fue uno de los mayores retos, ya que nunca antes había tenido la oportunidad de trabajar con ella.
+
+**Emily Angelica Villanueva Serna**
+
+
+**Elvin Andres Corredor Torres**
 
 ## 📚Bibliografía
 
