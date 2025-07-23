@@ -300,6 +300,7 @@ Personalmente, siento que he logrado un gran avance en los conocimientos adquiri
 
 **Emily Angelica Villanueva Serna**
 
+Durante el semestre pude poner en practica muchos conocimientos adquiridos durante mi pregrado, de igual forma adquiri nuevos conocimientos que en su momento quise aprender, pero por tiempos y otras responsabilidades no pude. Me alegra haber aprendido todo esto en la maestria, pues mi objetivo al entrar a esta universidad fue de aprender cosas nuevas.
 
 **Elvin Andres Corredor Torres**
 
