@@ -283,6 +283,7 @@ Se creó la siguiente escena en CoppeliaSim, como base para el funcionamiento, d
 ## 🍂Autoevaluacion Grupal
 
 ## 🍃Autoevaluacion Individual
+Personalmente, siento que he logrado un gran avance en los conocimientos adquiridos a lo largo del curso, los cuales se reflejan en el desarrollo de este proyecto, donde fue necesario integrar cada uno de los temas abordados en clase con ROS 2. Aunque ROS comparte ciertas similitudes con ROS 2, adaptarse a esta nueva versión fue uno de los mayores retos, ya que nunca antes había tenido la oportunidad de trabajar con ella. -- Julian Gonzalez 
 
 ## 📚Bibliografía
 
