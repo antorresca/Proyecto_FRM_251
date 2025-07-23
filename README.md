@@ -302,6 +302,8 @@ Personalmente, siento que he logrado un gran avance en los conocimientos adquiri
 
 
 **Elvin Andres Corredor Torres**
+El proyecto me permitio aplicar conocimientos de diseño y manufactura para un nuevo tipo que desconocia en el que el agarre se realiza adapatandose al objeto, permitiendo realizar tareas más delicadas, además de adaptar esto a un entorno de robotica fue un reto nuevo para mi, algo que me permitio explorar nuevas fronteras con soluciones mas versatiles e innovadoras para los problemas de este nuevo mundo.
+
 
 ## 📚Bibliografía
 
